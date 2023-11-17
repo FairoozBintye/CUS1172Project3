@@ -1,20 +1,16 @@
-var questionUrl = "https://my-json-server.typicode.com/FairoozBintye/CUS1172Project3";
 var quizzes;
 
-fetch(questionUrl).then(function (res) {
-    res.json().then(function (data) {
-        quizzes = data;
-    }).catch(function (err) {
-        console.log(err);
+fetch('https://my-json-server.typicode.com/FairoozBintye/CUS1172Project3')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Fetched quizzes:', data); // Inspect the fetched data
+        quizzes = data; // Assign data to quizzes
+    })
+    .catch(error => {
+        console.error('Error fetching quizzes:', error);
     });
-})
-    .catch(function (err) {
-        console.log(err);
-    });
 
-
-
-var correctMessages = ["Brilliant!", "Awesome!", "Good work!", "Wonderful!"];
+var correctMessages = ["Good work!"];
 var isCorrectMessageShowing = false;
 var score = 0;
 var elapsedTime = 0;
@@ -25,7 +21,8 @@ var lastName;
 var questionIndex = 0;
 var currentQuiz;
 
-function startQuiz(isRetake) {
+function startQuiz(event, isRetake) {
+    event.preventDefault(); // Prevents default form submission
     if (isRetake == false) {
         var firstNameInput = document.querySelector("#firstName");
         firstName = firstNameInput.value;
@@ -37,8 +34,10 @@ function startQuiz(isRetake) {
         if (firstName == "" || lastName == "" || quizName == "none") {
             return alert("Please fill out form completely.")
         }
+        console.log('quizName:', quizName);
         currentQuiz = quizzes[quizName];
-    }
+        //console.log(currentQuiz);
+}
     score = 0;
     elapsedTime = 0;
     questionIndex = 0;
@@ -79,10 +78,12 @@ function checkAnswer(event) {
     }
 }
 
-var render_view = (view_id, quiz_index) => {
+var render_view = (view_id, quiz_index) => {     
+
     var source = document.querySelector(view_id).innerHTML;
     var template = Handlebars.compile(source);
     var html = "";
+
     if (currentQuiz != null && currentQuiz[quiz_index]) {
         currentQuiz[quiz_index].questionNumber = quiz_index + 1;
         html = template(currentQuiz[quiz_index]);
