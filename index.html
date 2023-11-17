@@ -7,10 +7,7 @@
   <title>Quiz</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Vesper+Libre&display=swap"
-    rel="stylesheet">
+    
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="javascript.js"></script>
@@ -55,8 +52,8 @@
             <option value="quiz_two">Quiz Two: Python, Java</option>
           </select>
           </div>
-          <button type="submit" class="btn btn-primary" onclick = "startQuiz(false)">Start</button>
-      </form>
+          <button type="submit" class="btn btn-primary" onclick="startQuiz(event, false)">Start</button>
+        </form>
 
       </script>
 
@@ -123,7 +120,7 @@
       <p>Percentage: {{totalScore}}%</p>
 
 
-      <button type="submit" class="btn btn-primary" onclick = "startQuiz(true)">Re-Take</button>
+      <button type="submit" class="btn btn-primary" onclick = "startQuiz(event, true)">Re-Take</button>
       <button type="submit" class="btn btn-primary" onclick = "loadQuiz()">Return to Menu</button>
   </script>
 </body>
