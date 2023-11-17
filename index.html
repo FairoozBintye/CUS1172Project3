@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Vesper+Libre&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="javascript.js"></script>
+</head>
+
+
+
+<body onload="loadQuiz()">
+
+  <h1>WEB DEVELOPMENT QUIZ</h1>
+
+  <hr>
+
+  <div class="container">
+    <div id="view-widget">
+
+    </div>
+
+    <div id="scoreboard-widget">
+
+    </div>
+  </div>
+
+
+  <script id="quiz-starter" type="text/x-handlebars-template">
+          <form>            
+        <label class="label" for="enterName">Enter Your Name</label>
+        <div class="row">
+          <div class="col">
+
+            <input id="firstName" type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input id="lastName" type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+        <label class="label" for="pickQuiz">Pick A Quiz</label>
+        <select class="custom-select form-control" id="pickQuiz">
+            <option selected value="none" disabled>Open this select menu</option>
+            <option value="quiz_one">Quiz One: HTML, CSS, Javascript, Bootstrap</option>
+            <option value="quiz_two">Quiz Two: Python, jQuery, SQL, Java</option>
+          </select>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick = "startQuiz(false)">Start</button>
+      </form>
+
+      </script>
+
+  <script id="question-template" type="text/x-handlebars-template">
+          <form id="question">
+          <h3 class="question-number">Question {{questionNumber}}</h3>
+        <label class="text-white" for="question1">{{question}}</label>
+        <div class="form-group">
+            {{#each choices}}
+            <div class="form-check text-white">
+                <input class="form-check-input" type="radio" name="exampleRadios" value="{{this}}">
+                <label class="form-check-label" for="exampleRadios1">
+                {{this}}
+                </label>
+              </div>
+            {{/each}}
+        </div>
+          <button type="submit" class="btn btn-primary" onclick = "checkAnswer(event)">Submit</button>
+    </form>
+      </script>
+
+  <script id="scoreboard-template" type="text/x-handlebars-template">
+ <div class="card" style="width: 18rem;">
+<div class="card-body">
+        <p class="card-text">Number of questions answered: {{answeredQuestions}}</p>
+        <p class="card-text">Score: {{score}}</p>
+        <p class="card-text">Time Elapsed: {{elapsedTime}}</p>
+      </div>
+    </div>
+      </script>
+
+  <script id="correct-template" type="text/x-handlebars-template">
+        <h1 id="message">{{message}}</h1>
+    </script>
+
+  <script id="feedback-template" type="text/x-handlebars-template">
+        <form>
+          <h3 class="question-number">Question {{questionNumber}}</h3>
+      <label for="question1">{{question}}</label>
+      <div class="form-group">
+          {{#each choices}}
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" value="{{this}}">
+              <label class="form-check-label" for="exampleRadios1">
+              {{this}}
+              </label>
+            </div>
+          {{/each}}
+      </div>
+        <button type="submit" class="btn btn-primary" onclick = "nextQuestion(event)">Got it!</button>
+        <br>
+       <label id="feedback" for="feedback1">{{feedback}}</label> 
+  </form>
+    </script>
+
+  <script id="result-template" type="text/x-handlebars-template">
+
+      {{#if passed}}
+      <p>Congratulations {{name}} you pass the quiz!</p>
+      {{else}}
+      <p>Sorry {{name}}, you fail the quiz</p>
+      {{/if}}
+      
+      <p>Percentage: {{totalScore}}%</p>
+
+
+      <button type="submit" class="btn btn-primary" onclick = "startQuiz(true)">Re-Take</button>
+      <button type="submit" class="btn btn-primary" onclick = "loadQuiz()">Return to Menu</button>
+  </script>
+</body>
+
+</html>
