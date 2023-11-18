@@ -41,7 +41,7 @@
       "question": "True/False: The value of a string variable can be surrounded by single quotes.",
       "inputType": "text",
       "correctAnswer": "False"
-    }
+    },
      {
       "question": "How do you insert COMMENTS in Python code?",
       "options": ["/*This is a comment*/","#This is a comment","//This is a comment"],
