@@ -15,14 +15,14 @@
       "options": [
         {
           "image": "https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png",
-          "label": "Python Logo"
+          "label": "The First Image"
         },
         {
           "image": "https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png",
-          "label": "Java Logo"
+          "label": "The Second Image"
         }
       ],
-      "correctAnswer": "Java Logo"
+      "correctAnswer": "The Second Image"
     },
      {
       "question": "Which HTML tag is used to define an internal style sheet?",
@@ -56,14 +56,14 @@
       "options": [
         {
           "image": "https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png",
-          "label": "Python Logo"
+          "label": "The First Image"
         },
         {
           "image": "https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png",
-          "label": "Java Logo"
+          "label": "The Second Image"
         }
       ],
-      "correctAnswer": "Python Logo"
+      "correctAnswer": "The First Image"
     },
      {
       "question": "How do you insert COMMENTS in Java code?",
