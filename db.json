@@ -11,9 +11,18 @@
       "correctAnswer": "JavaScript"
     },
     {
-      "question": "What does CSS stand for?",
-      "options": ["Computer Style Sheets", "Creative Style Sheets","Colorful Style Sheets", "Cascading Style Sheets"],
-      "correctAnswer": "Cascading Style Sheets"
+      "question": "Select the correct logo for Java programming language:",
+      "options": [
+        {
+          "image": "https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png",
+          "label": "Python Logo"
+        },
+        {
+          "image": "https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png",
+          "label": "Java Logo"
+        }
+      ],
+      "correctAnswer": "Java Logo"
     },
      {
       "question": "Which HTML tag is used to define an internal style sheet?",
