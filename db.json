@@ -43,14 +43,14 @@
       "correctAnswer": "False"
     },
      {
-      "question": "Select the correct image for the Python programming language:",
+      "question": "Select the correct logo for Python programming language:",
       "options": [
         {
-          "image": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
+          "image": "https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png",
           "label": "Python Logo"
         },
         {
-          "image": "https://brandslogos.com/wp-content/uploads/images/large/java-logo.png",
+          "image": "https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png",
           "label": "Java Logo"
         }
       ],
