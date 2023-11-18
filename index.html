@@ -26,8 +26,9 @@
 <!-- Quiz Page -->
 <div id="quiz-page" class="hidden">
     <div id="question-container"></div>
-    <button id="next-btn" onclick="nextQuestion()">Next</button>
+   
     <div id="scoreboard"></div> <!-- Include the scoreboard element here -->
+     <button id="next-btn" onclick="nextQuestion()">Next</button>
 </div>
 
 <!-- End View -->
@@ -51,6 +52,24 @@
         {{/each}}
     {{/if}}
 </script>
+
+
+<!-- Question Template (for image selection questions) -->
+<script id="image-selection-template" type="text/x-handlebars-template">
+    <div class="question-container">
+      <h2>{{question}}</h2>
+      <form id="quiz-form">
+        {{#each options}}
+          <div class="radio-option">
+            <input type="radio" name="user-answer" value="{{label}}" id="{{label}}">
+            <label for="{{label}}">
+              <img src="{{image}}" alt="{{label}}">
+            </label>
+          </div>
+        {{/each}}
+      </form>
+    </div>
+  </script>  
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 <script src="quiz.js"></script>

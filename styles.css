@@ -84,6 +84,17 @@ body {
   color: #007bff;
 }
 
+.radio-option {
+  margin-bottom: 20px; /* Add space between image options */
+}
+
+.radio-option img {
+  width: 100px; /* Adjust the width of the images as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevent spacing issues */
+  margin-bottom: 5px; /* Add space below each image */
+}
+
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {

@@ -63,21 +63,29 @@ async function fetchQuizData(selectedQuiz) {
     }
 }
 
-    // Handle rendering questions
     window.renderQuestion = () => {
         if (currentQuestionIndex < currentQuizData.length) {
-            const quizTemplate = Handlebars.compile(document.getElementById('quiz-template').innerHTML);
-            questionContainer.innerHTML = quizTemplate(currentQuizData[currentQuestionIndex]);
+            const currentQuestion = currentQuizData[currentQuestionIndex];
+    
+            // Check if the question is an image selection question
+            if (currentQuestion.options && currentQuestion.options[0].image) {
+                const imageSelectionTemplate = Handlebars.compile(document.getElementById('image-selection-template').innerHTML);
+                questionContainer.innerHTML = imageSelectionTemplate(currentQuestion);
+            } else {
+                const quizTemplate = Handlebars.compile(document.getElementById('quiz-template').innerHTML);
+                questionContainer.innerHTML = quizTemplate(currentQuestion);
+            }
         } else {
             // Quiz completed, show end view
             endView.style.display = 'block';
-           // quizPage.classList.add('hidden');
+            //quizPage.classList.add('hidden');
             nextBtn.style.display = 'none';
             congratsMessage.innerHTML = calculateResult();
-
             questionContainer.innerHTML = '';
+            
         }
     };
+    
 
     // Handle moving to the next question
     window.nextQuestion = () => {
