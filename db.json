@@ -43,9 +43,18 @@
       "correctAnswer": "False"
     },
      {
-      "question": "How do you insert COMMENTS in Python code?",
-      "options": ["/*This is a comment*/","#This is a comment","//This is a comment"],
-      "correctAnswer": "#This is a comment"
+      "question": "Select the correct image for the Python programming language:",
+      "options": [
+        {
+          "image": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
+          "label": "Python Logo"
+        },
+        {
+          "image": "https://brandslogos.com/wp-content/uploads/images/large/java-logo.png",
+          "label": "Java Logo"
+        }
+      ],
+      "correctAnswer": "Python Logo"
     },
      {
       "question": "How do you insert COMMENTS in Java code?",
