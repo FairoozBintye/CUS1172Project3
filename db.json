@@ -1,66 +1,56 @@
 {
-   "quiz_one" : [
-      {
-         "question" : "HTML: What does HTML stand for?",
-         "answer" : "Hyper Text Markup Language",
-         "choices" : ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language"],
-         "feedback" : "Correct answer is Hyper Text Markup Language"
-      },
-      {
-         "question" : "HTML: Choose the correct HTML element for the largest heading:",
-         "answer" : "<h1>",
-         "choices" : ["<h6>","<h1>","<head>","<heading>"],
-         "feedback" : "Correct answer is <h1>"
-      },   
-      {
-         "question" : "CSS: What does CSS stand for?",
-         "answer" : "Cascading Style Sheets",
-         "choices" : ["Computer Style Sheets", "Creative Style Sheets","Colorful Style Sheets", "Cascading Style Sheets"],
-         "feedback" : "Correct answer is Cascading Style Sheets"
-      },
-      {
-         "question" : "CSS: Which HTML tag is used to define an internal style sheet?",
-         "answer" : "<style>",
-         "choices" : ["<style>","<script>","<css>"],
-         "feedback" : "Correct answer is <style>"
-      },  
-      {
-         "question" : "Javascript: Inside which HTML element do we put the JavaScript?",
-         "answer" : "<script>",
-         "choices" : ["<js>","<scripting>","<script>","<javascript>"],
-         "feedback" : "Correct answer is <script>"
-      }      
-   ],
-   "quiz_two" : [
-      {
-         "question" : "Python: How do you insert COMMENTS in Python code?",
-         "answer" : "#This is a comment",
-         "choices" : ["/*This is a comment*/","#This is a comment","//This is a comment"],
-         "feedback" : "Correct answer is #This is a comment"
-      },
-      {
-         "question" : "Python: What is the correct way to create a function in Python?",
-         "answer" : "def myFunction():",
-         "choices" : ["def myFunction():","function myfunction():","create myFunction():"],
-         "feedback" : "Correct answer is def myFunction():"
-      },
-      {
-         "question" : "Java: Java is short for JavaScript.",
-         "answer" : "False",
-         "choices" : ["True","False"],
-         "feedback" : "Correct answer is False"
-      },
-      {
-         "question" : "Java: How do you insert COMMENTS in Java code?",
-         "answer" : "// This is a comment",
-         "choices" : ["/* This is a comment","// This is a comment", "# This is a comment"],
-         "feedback" : "Correct answer is // This is a comment"
-      },
-      {
-         "question" : "Java: The value of a string variable can be surrounded by single quotes.",
-         "answer" : "False",
-         "choices" : ["True","False"],
-         "feedback" : "Correct answer is False"
-      }
-   ]
+  "quiz1": [
+    {
+      "question": "What HTML element is used for the largest heading?",
+      "inputType": "text",
+      "correctAnswer": "<h1>"
+    },
+    {
+      "question": "Which programming language is known for building dynamic web applications?",
+      "options": ["Java", "Python", "JavaScript"],
+      "correctAnswer": "JavaScript"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "options": ["Computer Style Sheets", "Creative Style Sheets","Colorful Style Sheets", "Cascading Style Sheets"],
+      "correctAnswer": "Cascading Style Sheets"
+    },
+     {
+      "question": "Which HTML tag is used to define an internal style sheet?",
+      "options": ["<style>","<script>","<css>"],
+      "correctAnswer": "<style>"
+    },
+     {
+      "question": "Inside which HTML element do we put the JavaScript?",
+      "options": ["<js>","<scripting>","<script>","<javascript>"],
+      "correctAnswer": "<script>"
+    }
+  ],
+  "quiz2": [
+    {
+      "question": "Java is short for JavaScript.",
+      "options": ["True","False"],
+      "correctAnswer": "False"
+    },
+    {
+      "question": "Which programming language is often used for data science?",
+      "options": ["Java", "Python", "C++"],
+      "correctAnswer": "Python"
+    },
+    {
+      "question": "True/False: The value of a string variable can be surrounded by single quotes.",
+      "inputType": "text",
+      "correctAnswer": "False"
+    }
+     {
+      "question": "How do you insert COMMENTS in Python code?",
+      "options": ["/*This is a comment*/","#This is a comment","//This is a comment"],
+      "correctAnswer": "#This is a comment"
+    },
+     {
+      "question": "How do you insert COMMENTS in Java code?",
+      "options": ["/* This is a comment","// This is a comment", "# This is a comment"],
+      "correctAnswer": "// This is a comment"
+    }
+  ]
 }
