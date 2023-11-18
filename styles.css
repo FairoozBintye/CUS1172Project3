@@ -1,0 +1,101 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#starting-page, #quiz-page, #end-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#starting-page label {
+  margin-top: 10px;
+}
+
+#starting-page input, #starting-page select, #starting-page button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#quiz-page, #end-view {
+  width: 100%;
+}
+
+.question-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.options-container {
+  margin-top: 20px;
+}
+
+.options-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#next-btn, #retake-btn, #return-to-start-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#next-btn:hover, #retake-btn:hover, #return-to-start-btn:hover {
+  background-color: #0056b3;
+}
+
+#scoreboard {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#congrats-message {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+
+  #starting-page input, #starting-page select, #starting-page button {
+      width: 100%;
+  }
+
+  #next-btn, #retake-btn, #return-to-start-btn {
+      width: 100%;
+  }
+}

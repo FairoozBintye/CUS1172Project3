@@ -71,9 +71,11 @@ async function fetchQuizData(selectedQuiz) {
         } else {
             // Quiz completed, show end view
             endView.style.display = 'block';
-            quizPage.classList.add('hidden');
+           // quizPage.classList.add('hidden');
             nextBtn.style.display = 'none';
             congratsMessage.innerHTML = calculateResult();
+
+            questionContainer.innerHTML = '';
         }
     };
 
@@ -92,7 +94,7 @@ async function fetchQuizData(selectedQuiz) {
             correctAnswers++;
             alert('Correct! Good job!');
         } else {
-            // Display the correct answer below the question
+            // Display the correct answer
             alert(`Incorrect. The correct answer is: ${currentQuestion.correctAnswer}`);
         }
         
